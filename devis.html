@@ -65,7 +65,7 @@ h1{font-size:clamp(30px,6vw,46px);margin:14px 0 10px}
 input[type=text]{width:100%;font-family:var(--f-body);font-size:16px;padding:13px 15px;border:2px solid var(--ink);border-radius:12px;background:var(--paper);color:var(--ink)}
 .preview{margin:26px 0 6px;background:var(--paper);border:2px dashed var(--ink);border-radius:14px;padding:16px 18px}
 .preview .lab{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px}
-.preview p{margin:0;font-size:16px}
+.preview p{margin:0;font-size:16px;white-space:pre-line}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.02em;font-size:15px;padding:15px 26px;border:2px solid var(--ink);border-radius:999px;background:var(--orange);color:var(--ink);text-decoration:none;cursor:pointer;box-shadow:6px 6px 0 var(--ink);transition:transform .18s ease,box-shadow .18s ease}
 .btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
@@ -136,7 +136,7 @@ input[type=text]{width:100%;font-family:var(--f-body);font-size:16px;padding:13p
   var noteDef=noteEl.textContent;
   function filled(v){return v && v.trim() ? v.trim() : '[à compléter]'}
   function message(){
-    return 'Bonjour, je m\u2019appelle '+filled(state.nom)+'. Je souhaite un devis pour : '+state.type+'. Commune : '+filled(state.commune)+'. Délai : '+state.delai+'. Merci de me rappeler.';
+    return 'Bonjour, je m\u2019appelle '+filled(state.nom)+'.\nDevis souhaité : '+state.type+'.\nCommune : '+filled(state.commune)+'.\nDélai : '+state.delai+'.\nMerci de me rappeler.';
   }
   function render(){msgEl.textContent=message();}
   function group(id,key){
