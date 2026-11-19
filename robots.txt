@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aycotek.github.io/Allo-Debarras-Normandie/sitemap.xml
